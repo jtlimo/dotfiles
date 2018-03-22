@@ -6,6 +6,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'bf4/vim-dark_eyes'
 Plugin 'andbar-ru/vim-unicon'
 Plugin 'scrooloose/nerdtree'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 set background=dark
 colorscheme unicon
@@ -19,14 +20,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set nowrap        		"don't wrap lines
-set shiftwidth=4  		"number of spaces to use for autoindenting
 set shiftround    		"use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     		"set show matching parenthesis
 set ignorecase    		"ignore case when searching
@@ -39,7 +37,7 @@ set incsearch     		"show search matches as you type
 set hidden
 
 "turn on syntax highlighting
-syntax enable
+syntax on
 
 set hls "highlight search"
 set hlsearch      		"highlight search terms
@@ -50,10 +48,12 @@ set copyindent   		"copy the previous indentation on autoindenting
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set tabstop=8
 set expandtab
+set modeline
+filetype indent plugin on
 
 " ============ History =================
 
