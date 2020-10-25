@@ -29,6 +29,7 @@ set shiftround    		"use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     		"set show matching parenthesis
 set ignorecase    		"ignore case when searching
 set smartcase     		"ignore case if search pattern is all lowercase, case-sensitive otherwise
+set clipboard=unnamedplus
 set incsearch     		"show search matches as you type
 
 " This makes vim act like all other editors, buffers can

@@ -18,7 +18,8 @@ WEBSTORM=/home/jess/Applications/Webstorm/
 export DEFAULT_USER="jess"
 export TERM="xterm-256color"
 export ZSH=/usr/share/oh-my-zsh
-
+export GIT_EDITOR=vim
+export GUPY_DEV_CLI_DIR="/home/jess/Projects/work/undefined/backend/gupy-dev-cli"
 POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 #POWERLEVEL9K_FOLDER_ICON=""
@@ -85,6 +86,13 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-
-eval $(thefuck --alias)
+echo "Setting node to gupy needed version"
+nvm use gupy
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export DENO_INSTALL="/home/jess/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+source /usr/bin/virtualenvwrapper.sh

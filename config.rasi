@@ -1,0 +1,11 @@
+configuration {
+        position: center;
+	combi-modi: ["window,run,ssh"];
+	width: 75;
+	lines: 1;
+	columns: 1;
+	font: "System San Francisco Display 15";
+	eh: 2;
+	theme: "night-owl";
+}
+/* vim:ft=css
