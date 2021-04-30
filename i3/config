@@ -45,8 +45,11 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec xterm
-#bindsym $mod+Return exec ./Downloads/hyper-3.0.2-x86_64.AppImage
 bindsym $mod+Return exec terminator
+bindsym $mod+Shift+h exec ./Downloads/hyper-3.0.2-x86_64.AppImage
+
+# start firefox
+bindsym $mod+Shift+f exec firefox
 
 # start slack
 bindsym $mod+Shift+s exec slack
@@ -55,13 +58,17 @@ bindsym $mod+Shift+s exec slack
 bindsym $mod+t exec telegram-desktop
 
 # start discord
-# bindsym $mod+Shift+d exec discord
+bindsym $mod+Shift+d exec discord
 
 # start dbeaver
 bindsym $mod+b exec dbeaver
 
+# start kazam
+bindsym $mod+Shift+m exec kazam
+
 # print screen using deepin-screenshot
 bindsym $mod+p exec deepin-screenshot
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -153,6 +160,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+for_window [class="google-chrome"] move container to workspace $ws1
 for_window [class="firefox"] move container to workspace $ws1
 for_window [class="slack"] move container to workspace $ws3
 for_window [class="terminator"] move container to workspace $ws2
@@ -219,13 +227,10 @@ colors {
 	}
 }
 
-
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -config /home/jess/.config/rofi/config.rasi
 
 # define wallpaper
-exec_always feh --bg-scale /home/jess/Images/impressionism-ultrawide.jpg
+exec_always feh --bg-scale /home/jess/Images/wallpaper.jpg
 
 exec_always --no-startup-id picom -f
-
-exec_always --no-startup-id shutdown -h 19:00

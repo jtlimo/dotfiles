@@ -1,4 +1,6 @@
 #!/bin/sh
+
+xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
 # start some nice programs
@@ -9,6 +11,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap us &
-sh ~/.screenlayout/default.sh
+sh .screenlayout/large-monitor-layout.sh &
 exec i3
