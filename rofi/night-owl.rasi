@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Rofi color theme
+
+   Based on the Night owl color scheme for VsCode by 
+   https://githubcom/morhetz/gruvbox
+
+   File: night-owl.rasi
+   Desc: Night Owl color theme for Rofi
+   Author: jtlimo
+   Source: https://github.com/jtlimo/night-owl-rofi
+   ========================================================================== */
+
+ *{
+  /* Night Owl colors */
+    foreground: #d6deeb;
+    background: #011627;
+    border: #011627;
+    active-background: #7E97AC;
+    active-foreground: #C5E4FD;
+    selection-background: #234d708c;
+    selection-foreground: #ffffff;
+  }
+
+  #window {
+    background-color: @background;
+    border:           1;
+    padding:          5;
+    border-radius: 10px;
+}
+
+  #overlay {
+      background-color: @background;
+  }
+  #mainbox {
+    border:  0;
+    padding: 0;
+    background-color: @background; 
+
+}
+  #box {
+    background-color: @background;
+  }
+
+  #message {
+    border:       2px 0px 0px ;
+    border-color: @border;
+    padding:      1px ;
+
+}
+  #textbox {
+    text-color: @foreground;
+    background-color: @background;
+}
+
+  #listview {
+    background-color: @background;
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    border-color: @border;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
+}
+
+  #element {
+    border:  0;
+    background-color: @background;
+    padding: 1px ;
+}
+
+  #element.normal.normal {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.normal.urgent {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.normal.active {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.selected.normal {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.selected.urgent {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.selected.active {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.alternate.normal {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.alternate.urgent {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #element.alternate.active {
+    background-color: @background;
+    text-color: @foreground;       
+}
+
+  #scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+    background-color: @background;
+}
+
+  #sidebar {
+    border:       2px 0px 0px ;
+    border-color: @border;
+    background-color: @background;
+}
+
+  #button.selected {
+    text-color: @foreground;       
+    background-color: @background;
+}
+
+  #inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+    background-color: @background;
+}
+
+  #case-indicator {
+    spacing:    0;
+    text-color: @foreground; 
+    background-color: @background;
+}
+
+  #entry {
+    spacing:    0;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+  #prompt, button{
+    spacing:    0;
+    text-color: @foreground;
+    background-color: @background;
+}
+
+  #inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+  #textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+    background-color: @background;
+}
+/* vim:ft=css
