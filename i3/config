@@ -192,11 +192,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start polybar
-exec_always $HOME/.config/polybar/launch.sh
-
 # Define background image / wallpaper
-exec_always feh --bg-scale /home/jess/documents/images/wallpaper.jpg
+exec_always feh --bg-scale /home/jess/Documents/images/wallpaper.jpg
 #Multi Monitor (Dual Monitor, extended monitor)
 #Replace HDMI2 with DVI-2, VGA-2, DP-2, DVI-2 etc. Get value by typing xrandr in the terminal.
 #If X is a natural number, then;
@@ -204,3 +201,6 @@ exec_always feh --bg-scale /home/jess/documents/images/wallpaper.jpg
 #HDMI-X is display used in Desktop connected to monitor with HDMI Cable.
 #VGA-X is display used in Desktop connected to monitor with VGA Cable.
 exec --no-startup-id xrandr --output EDP-1 --left-of DP-3 --auto
+
+# Start polybar
+exec --no-startup-id $HOME/.config/polybar/launch.sh
