@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 exec_always $HOME/.config/polybar/launch.sh
 
 # Define background image / wallpaper
-exec_always feh --bg-scale /home/jess/images/wallpaper.jpg
+exec_always feh --bg-scale /home/jess/documents/images/wallpaper.jpg
 #Multi Monitor (Dual Monitor, extended monitor)
 #Replace HDMI2 with DVI-2, VGA-2, DP-2, DVI-2 etc. Get value by typing xrandr in the terminal.
 #If X is a natural number, then;
